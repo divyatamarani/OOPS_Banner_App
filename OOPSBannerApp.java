@@ -1,29 +1,58 @@
 /**
- * OOPSBannerApp UC5 – Banner using Inline Array Initialization
+ * OOPSBannerApp UC6 – Banner using Methods
  *
- * Prints "OOPS" using inline array + loop.
- *
- * @author Divya
- * @version 5.0
+ * Demonstrates modular design using methods.
  */
 public class OOPSBannerApp {
 
+    // Method for O
+    public static String[] getOPattern() {
+        return new String[]{
+            " *** ",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            " *** "
+        };
+    }
+
+    // Method for P
+    public static String[] getPPattern() {
+        return new String[]{
+            "**** ",
+            "*   *",
+            "*   *",
+            "**** ",
+            "*    ",
+            "*    ",
+            "*    "
+        };
+    }
+
+    // Method for S
+    public static String[] getSPattern() {
+        return new String[]{
+            " ****",
+            "*    ",
+            "*    ",
+            " *** ",
+            "    *",
+            "    *",
+            "**** "
+        };
+    }
+
     public static void main(String[] args) {
 
-        // Inline array initialization
-        String[] lines = {
-            String.join(" ", " *** ", " *** ", " **** ", " ***** "),
-            String.join(" ", "*   *", "*   *", "*   *", "*     "),
-            String.join(" ", "*   *", "*   *", "*   *", "*     "),
-            String.join(" ", "*   *", "*   *", "**** ", " **** "),
-            String.join(" ", "*   *", "*   *", "*    ", "     *"),
-            String.join(" ", "*   *", "*   *", "*    ", "*    *"),
-            String.join(" ", " *** ", " *** ", "*    ", " **** ")
-        };
+        String[] o = getOPattern();
+        String[] p = getPPattern();
+        String[] s = getSPattern();
 
-        // Loop to print
-        for (String line : lines) {
-            System.out.println(line);
+        // Print OOPS
+        for (int i = 0; i < o.length; i++) {
+            System.out.println(o[i] + " " + o[i] + " " + p[i] + " " + s[i]);
         }
     }
 }
