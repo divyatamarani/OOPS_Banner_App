@@ -1,22 +1,22 @@
 /**
- * OOPSBannerApp UC2 – Banner Display Application
+ * OOPSBannerApp UC3 – Banner Display using String.join()
  *
- * Prints "OOPS" in banner format using * and spaces.
+ * Prints "OOPS" banner using String.join() instead of + operator.
  *
  * @author Divya
- * @version 2.0
+ * @version 3.0
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println("  *****     *****     ******     *****  ");
-        System.out.println(" *     *   *     *    *     *   *     * ");
-        System.out.println("*       * *       *   *     *   *       ");
-        System.out.println("*       * *       *   ******     *****  ");
-        System.out.println("*       * *       *   *              *  ");
-        System.out.println(" *     *   *     *    *        *     *  ");
-        System.out.println("  *****     *****     *         *****   ");
+        System.out.println(String.join(" ", " *** ", " *** ", " **** ", " ***** "));
+        System.out.println(String.join(" ", "*   *", "*   *", "*   *", "*     "));
+        System.out.println(String.join(" ", "*   *", "*   *", "*   *", "*     "));
+        System.out.println(String.join(" ", "*   *", "*   *", "**** ", " **** "));
+        System.out.println(String.join(" ", "*   *", "*   *", "*    ", "     *"));
+        System.out.println(String.join(" ", "*   *", "*   *", "*    ", "*    *"));
+        System.out.println(String.join(" ", " *** ", " *** ", "*    ", " **** "));
 
     }
 }
