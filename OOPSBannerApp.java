@@ -1,30 +1,62 @@
 /**
- * OOPSBannerApp UC4 – Banner using Array and Loop
+ * OOPSBannerApp UC6 – Banner using Methods (OOPS)
  *
- * Prints "OOPS" using String array and loop.
+ * Demonstrates modular design using methods.
  *
  * @author Divya
- * @version 4.0
+ * @version 6.0
  */
 public class OOPSBannerApp {
 
+    // Method for O
+    public static String[] getOPattern() {
+        return new String[]{
+            " *** ",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*   *",
+            " *** "
+        };
+    }
+
+    // Method for P
+    public static String[] getPPattern() {
+        return new String[]{
+            "**** ",
+            "*   *",
+            "*   *",
+            "**** ",
+            "*    ",
+            "*    ",
+            "*    "
+        };
+    }
+
+    // Method for S
+    public static String[] getSPattern() {
+        return new String[]{
+            " ****",
+            "*    ",
+            "*    ",
+            " *** ",
+            "    *",
+            "    *",
+            "**** "
+        };
+    }
+
     public static void main(String[] args) {
 
-        // Step 1: Create array
-        String[] lines = new String[7];
+        // Get patterns
+        String[] o = getOPattern();
+        String[] p = getPPattern();
+        String[] s = getSPattern();
 
-        // Step 2: Fill array using String.join()
-        lines[0] = String.join(" ", " *** ", " *** ", " **** ", " ***** ");
-        lines[1] = String.join(" ", "*   *", "*   *", "*   *", "*     ");
-        lines[2] = String.join(" ", "*   *", "*   *", "*   *", "*     ");
-        lines[3] = String.join(" ", "*   *", "*   *", "**** ", " **** ");
-        lines[4] = String.join(" ", "*   *", "*   *", "*    ", "     *");
-        lines[5] = String.join(" ", "*   *", "*   *", "*    ", "*    *");
-        lines[6] = String.join(" ", " *** ", " *** ", "*    ", " **** ");
-
-        // Step 3: Loop and print
-        for (String line : lines) {
-            System.out.println(line);
+        // Print OOPS
+        for (int i = 0; i < o.length; i++) {
+            System.out.println(o[i] + " " + o[i] + " " + p[i] + " " + s[i]);
         }
     }
 }
